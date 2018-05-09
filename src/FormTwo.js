@@ -3,18 +3,18 @@ import React, { Component } from "react";
 class FormTwo extends Component {
   render() {
     return (
-      <div>
-        <h1>Form Two</h1>
-        <form action="">
-          <input type="text"/>
-          <input type="text"/>
-          <input type="text"/>
-          <input type="text"/>
-          <input type="text"/>
-          <input type="text"/>
-        </form>
-      </div>
-    );
+      <form>
+        {this.props.formData.map((category, index) => (
+
+          <div>
+            <label>Hi, {category.name}!</label>
+            <select>
+              {category.options.map((option, index) => (
+                <option value={option}>{option}</option>
+              ))}
+            </select>
+          </div>))}
+      </form>);
   }
 }
 
