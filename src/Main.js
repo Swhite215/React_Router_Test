@@ -25,6 +25,7 @@ class Main extends Component {
           <Route path="/formTwo" component={FormTwo}/>
           <Route path="/formThree" component={FormThree}/>
         </div>
+        <p>Testing</p>
       </div>
     </HashRouter>
     );
